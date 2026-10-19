@@ -2149,3 +2149,93 @@ footer {
 .skill-group li:last-child {
     border-bottom: none;
 }
+/* ================= WEBSITE FEEDBACK ================= */
+
+.website-feedback {
+padding: 100px 24px;
+background: #f8fafc;
+border-top: 1px solid #e5e7eb;
+text-align: center;
+}
+
+.feedback-inner {
+max-width: 760px;
+margin: 0 auto;
+}
+
+.feedback-label {
+margin-bottom: 24px;
+color: #312e81;
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 2px;
+}
+
+.feedback-inner h2 {
+margin: 0 auto 24px;
+font-size: clamp(32px, 5vw, 52px);
+line-height: 1.15;
+letter-spacing: -1.5px;
+color: #111827;
+}
+
+.feedback-inner h2 span {
+display: block;
+color: #6b7280;
+}
+
+.feedback-description {
+max-width: 600px;
+margin: 0 auto 32px;
+color: #6b7280;
+font-size: 16px;
+line-height: 1.8;
+}
+
+.feedback-button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 18px;
+padding: 16px 26px;
+background: #312e81;
+color: #ffffff;
+border: 1px solid #312e81;
+border-radius: 6px;
+font-size: 14px;
+font-weight: 600;
+text-decoration: none;
+transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.feedback-button:hover {
+background: #4338ca;
+transform: translateY(-2px);
+}
+
+.feedback-button span {
+font-size: 18px;
+}
+
+.feedback-note {
+margin-top: 20px;
+color: #6b7280;
+font-size: 13px;
+}
+
+@media (max-width: 600px) {
+.website-feedback {
+padding: 72px 22px;
+}
+
+```
+.feedback-inner h2 {
+    letter-spacing: -0.8px;
+}
+
+.feedback-description {
+    font-size: 15px;
+}
+```
+
+}
