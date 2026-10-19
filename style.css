@@ -508,12 +508,62 @@ nav a:hover {
 }
 
 /* =========================================================
-   WORK
+   WORK — PREMIUM BLUE & VIOLET BACKGROUND
 ========================================================= */
 
 .work {
-    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(124, 58, 237, 0.18) 0%,
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 0% 100%,
+            rgba(59, 130, 246, 0.20) 0%,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #edf4ff 0%,
+            #dce9ff 48%,
+            #e9e7ff 100%
+        );
+
+    border-bottom: 1px solid #dbe5f5;
 }
+
+/* Decorative circles */
+
+.work::before,
+.work::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.work::before {
+    width: 360px;
+    height: 360px;
+    top: -200px;
+    right: -100px;
+    background: rgba(96, 145, 255, 0.20);
+}
+
+.work::after {
+    width: 300px;
+    height: 300px;
+    bottom: -190px;
+    left: -100px;
+    background: rgba(124, 58, 237, 0.12);
+}
+
 
 .work-grid {
     display: grid;
@@ -541,14 +591,14 @@ nav a:hover {
 }
 
 .project-image {
-    width: 100%;
-    height: 360px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 15px;
-    background: #eef2f7;
+width: 100%;
+height: 360px;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+border-radius: 15px;
+background: linear-gradient(135deg, #f8fafc, #eef2ff);
 }
 
 .project-large .project-image {
@@ -2238,4 +2288,161 @@ padding: 72px 22px;
 }
 ```
 
+}
+/* =========================================================
+   WORK SECTION — LIGHT BLUE TO SOFT BLUE
+========================================================= */
+
+.work {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #eff6ff 0%,
+        #dbeafe 50%,
+        #bfdbfe 100%
+    ) !important;
+
+    border-bottom: 1px solid #cbdff7;
+}
+
+/* Soft blue decorative lighting */
+
+.work::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -150px;
+    right: -100px;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+    background: rgba(147, 197, 253, 0.22);
+    pointer-events: none;
+}
+
+.work::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -150px;
+    left: -100px;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+    background: rgba(96, 165, 250, 0.15);
+    pointer-events: none;
+}
+
+/* Section headings */
+
+.work .section-heading h2 {
+    color: #172554;
+}
+
+.work .section-heading h2 span {
+    color: #2563eb;
+}
+
+.work .section-number {
+    color: #475569;
+}
+
+/* Project cards */
+
+.work .project-card {
+    background: #ffffff;
+    border: 1px solid rgba(191, 219, 254, 0.9);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Project card hover */
+
+.work .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(30, 64, 175, 0.12);
+}
+
+/* Project image background */
+
+.work .project-image {
+    background: linear-gradient(
+        135deg,
+        #f8fbff 0%,
+        #eff6ff 100%
+    );
+}
+
+/* Project titles */
+
+.work .project-info h3 {
+    color: #172554;
+}
+
+/* Project category labels */
+
+.work .project-info span {
+    color: #3b82f6;
+}
+
+/* Project descriptions */
+
+.work .project-info p {
+    color: #52627a;
+    line-height: 1.8;
+}
+
+/* Mobile background */
+
+@media (max-width: 650px) {
+    .work {
+        background: linear-gradient(
+            160deg,
+            #eff6ff 0%,
+            #dbeafe 60%,
+            #bfdbfe 100%
+        ) !important;
+    }
+
+    .work .project-card {
+        border-radius: 16px;
+    }
+}/* VIEW ALL PROJECTS BUTTON */
+
+.work-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.view-all-projects {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 26px;
+    background: #312e81;
+    color: #ffffff;
+    border: 1px solid #312e81;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.view-all-projects:hover {
+    background: #4338ca;
+    transform: translateY(-3px);
 }
